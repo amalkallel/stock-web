@@ -2,15 +2,38 @@ package com.stock.data;
 
 public class Product {
 	
-	private String code;
-
-	public String getCode() {
-		return code;
+	private String productCode;
+	private String quantity;
+	private String category;
+	private String productDescription;
+	
+	
+	public String getProductCode() {
+		return productCode;
+	}
+	public void setProductCode(String productCode) {
+		this.productCode = productCode;
+	}
+	public String getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(String quantity) {
+		this.quantity = quantity;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	public String getProductDescription() {
+		return productDescription;
+	}
+	public void setProductDescription(String productDescription) {
+		this.productDescription = productDescription;
 	}
 
-	public void setCode(String code) {
-		this.code = code;
-	}
+	
 	
 
 }
