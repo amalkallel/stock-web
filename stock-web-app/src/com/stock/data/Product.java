@@ -3,6 +3,7 @@ package com.stock.data;
 public class Product {
 	
 	private String productCode;
+	private String productName;
 	private String quantity;
 	private String category;
 	private String productDescription;
@@ -13,6 +14,12 @@ public class Product {
 	}
 	public void setProductCode(String productCode) {
 		this.productCode = productCode;
+	}
+	public String getProductName() {
+		return productName;
+	}
+	public void setProductName(String productName) {
+		this.productName = productName;
 	}
 	public String getQuantity() {
 		return quantity;

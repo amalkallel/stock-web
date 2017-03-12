@@ -7,7 +7,7 @@ public class Provider {
 		private String firstName;
 		private String phone;
 		private String adress;
-		private String region;
+		
 		
 		
 		public int getIdProvider() {
@@ -40,12 +40,7 @@ public class Provider {
 		public void setAdress(String adress) {
 			this.adress = adress;
 		}
-		public String getRegion() {
-			return region;
-		}
-		public void setRegion(String region) {
-			this.region = region;
-		}
+		
 		
 		
 		

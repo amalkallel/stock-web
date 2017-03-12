@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+
 public class MySQLAccess {
 	private Connection connect = null;
     private Statement statement = null;
@@ -33,6 +34,16 @@ public class MySQLAccess {
      preparedStatement.setString(3, "28 664 617");
      preparedStatement.setString(4, "Ariana Tunis");
      preparedStatement.executeUpdate();
+     
+     
+     
+     // Statements allow to issue SQL queries to the database
+     statement = connect.createStatement();
+     // Result set get the result of the SQL query
+     resultSet = statement
+                     .executeQuery("select * from stock_management.provider");
+     writeResultSet(resultSet);
+
 
      
     	 } catch (Exception e) {
@@ -41,6 +52,27 @@ public class MySQLAccess {
              close();
      }
     }
+    
+    
+    private void writeResultSet(ResultSet resultSet) throws SQLException {
+        // ResultSet is initially before the first data set
+        while (resultSet.next()) {
+                // It is possible to get the columns via name
+                // also possible to get the columns via the column number
+                // which starts at 1
+                // e.g. resultSet.getSTring(2);
+                String firstName = resultSet.getString("name");
+                String name = resultSet.getString("firstName");
+                String phone = resultSet.getString("phone");
+                String adress = resultSet.getString("adress");
+         
+                System.out.println("Nom: " + firstName);
+                System.out.println("Prenom: " + name);
+                System.out.println("Téléphone: " + phone);
+                System.out.println("Adresse: " + adress);
+                
+        }
+}
     	 
     	 
     	// You need to close the resultSet

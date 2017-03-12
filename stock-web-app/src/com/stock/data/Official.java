@@ -2,11 +2,24 @@ package com.stock.data;
 
 public class Official {
 
-	private int idOfficial;
-	private String name;
-	private String firstName;
-	private String phone;
-	private String adress;
+	protected int idOfficial;
+	protected String name;
+	protected String firstName;
+	protected String phone;
+	protected String adress;
+	
+	
+	
+	
+	public Official(int idOfficial, String name, String firstName, String phone, String adress) {
+		super();
+		this.idOfficial = idOfficial;
+		this.name = name;
+		this.firstName = firstName;
+		this.phone = phone;
+		this.adress = adress;
+	}
+	
 	public int getIdOfficial() {
 		return idOfficial;
 	}
